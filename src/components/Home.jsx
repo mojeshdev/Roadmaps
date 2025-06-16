@@ -3,9 +3,7 @@ import { ArrowRight } from 'lucide-react';
 
 
 const names = [
-    {name: 'Frontend'},
-    {name: 'Backend'},
-    {name: 'DevOps'},
+
     {name: 'Full Stack'},
     {name: 'AI Engineer'},
     {name: 'Data Analyst'},

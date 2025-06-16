@@ -6,7 +6,7 @@ const names = [
 
     {name: 'Frontend'},
     {name: 'Backend'},
-    {name: 'Fullstack'},
+    {name: 'DevOps'},
     {name: 'Full Stack'},
     {name: 'AI Engineer'},
     {name: 'Data Analyst'},

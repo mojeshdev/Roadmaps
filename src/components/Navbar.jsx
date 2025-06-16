@@ -30,8 +30,6 @@ export default function Navbar() {
                             <option>Community Roadmaps</option>
                         </select>
                     </li>
-
-                    <li className="text-white"><NavLink to="/ai">AI Tutor</NavLink></li>
                     <li className="text-white"><NavLink to="/teams">Teams</NavLink></li>
                     <li className="text-white"><NavLink to="/login">Login</NavLink></li>
                     <li className="text-white"><NavLink to="/signup">Sign Up</NavLink></li>

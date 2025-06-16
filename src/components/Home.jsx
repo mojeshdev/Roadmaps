@@ -1,4 +1,6 @@
 import {Link} from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+
 
 const names = [
     {name: 'Frontend'},
@@ -67,8 +69,49 @@ const practices = [
     {name: 'AWS'},
 ]
 
+const questions = [
+    {name: 'JavaScript'},
+    {name: 'Node.js'},
+    {name: 'React'},
+    {name: 'Backend'},
+    {name: 'Data Analytics'},
+    {name: 'Full Stack'},
+    {name: 'Golang'},
+    {name: 'Data Science'},
+    {name: 'Frontend'},
+    {name: 'DevOps'},
+]
+
+const guides = [
+    {name: 'Data Analyst Career Path: My Pro Advice'},
+    {name: 'TypeScript vs JavaScript: Which to Choose For Your Project'},
+    {name: 'Top 30 JavaScript Interview Questions and Answers'},
+    {name: 'How to Become a Data Analyst with No Experience: My Advice'},
+    {name: 'Top 60+ Data Science Interview Questions and Answers'},
+    {name: '50 Popular Golang Interview Questions (+ Quiz!)'},
+    {name: '50 Popular Data Analyst Interview Questions (+ Quiz!)'},
+    {name: 'Data Science vs. Cyber Security: Which Is Best for You?'},
+    {name: 'Data Science vs Software Engineering: Which to Choose?'},
+    {name: 'Data Science vs. AI: How I Would Choose My Path'},
+    {name: 'Data Science vs Business Analytics: How Id Choose My Path'},
+    {name: 'Top 50 Full Stack Developer Interview Questions'},
+    {name: '50 Popular Backend Developer Interview Questions and Answers'},
+    {name: 'Top 30 Popular Front End Developer Interview Questions'},
+]
+
+const videos = [
+    {name: 'The Ultimate Frontend Developer Roadmap'},
+    {name: 'Session Based Authentication'},
+    {name: 'Basic Authentication'},
+    {name: 'Basics of Authentication'},
+    {name: 'Graph Data Structure'},
+    {name: 'Heap Data Structure'},
+    {name: 'Tree Data Structure'},
+]
+
 export default function Home(){
     return(
+        <>
         <div className="bg-slate-950 min-h-screen bg-cover bg-no-repeat">
             <div className=''>
                 <h1 className="text-5xl p-5 font-bold bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent text-center ">Developers Roadmaps</h1>
@@ -135,6 +178,53 @@ export default function Home(){
                     ))}
                 </div>
 
+                {/* Questions */}
+                
+                <div className="absolute w-48 h-9 rounded-xl border border-slate-500 ml-[12rem] md:ml-[41rem] mt-10 ">
+                    <h1 className="text-slate-400 text-center py-1">Questions</h1>
+                </div>
+
+                <div className='grid grid-cols-1 mt-32 sm:grid-cols-2 md:grid-cols-3 gap-0  gap-y-4 mx-auto max-w-3xl'>
+                    {questions.map((question) => (
+                        <div key={question} className='w-56 p-3 rounded-md border border-transparent bg-slate-800  hover:border-slate-500 transition '>
+                            <h1 className='text-slate-400'>{question.name}</h1>
+                        </div>
+                    ))}
+                </div>
         </div>
+
+        <div className='bg-white min-h-screen'>
+                {/* Guides */}
+                <h1 className='text-3xl font-sans font-bold ml-[20%] mt-10 mb-7'>Guides</h1>
+                {guides.map((guide) => (
+                    <div key={guide} className='ml-[20%] mt-4'>
+                        
+                        <Link  ><p className='hover:text-blue-600 text-bold '>{guide.name}</p></Link>
+                        <div className='w-[38rem] h-[0.5px] mt-[2px] bg-gray-800'></div>
+                    </div>
+                ))}
+                <button className='bg-gradient-to-r from-gray-500 to-slate-950 text-white font-sans font-extrabold px-3 py-2 ml-[20%] rounded-2xl text-xs mt-7  flex items-center '>
+                    View ALL Guides <ArrowRight className="ml-2" />
+                </button>
+
+                {/* Videos */}
+                <h1 className='text-3xl font-sans font-bold ml-[20%] mt-10 mb-7'>Guides</h1>
+                {videos.map((video) => (
+                    <div key={video} className='ml-[20%] mt-4'>
+                        
+                        <Link  ><p className='hover:text-blue-600 text-bold '>{video.name}</p></Link>
+                        <div className='w-[38rem] h-[0.5px] mt-[2px] bg-gray-800'></div>
+                    </div>
+                ))}
+                <button className='bg-gradient-to-r from-gray-500 to-slate-950 text-white font-sans font-extrabold px-3 py-2 ml-[20%] rounded-2xl text-xs mt-7  flex items-center '>
+                    View ALL videos <ArrowRight className="ml-2" />
+                </button>
+
+                <div className='w-full h-[1px] bg-gray-400 mb-8 mt-16'></div>
+                <h1 className='font-sans font-extrabold text-5xl text-center'>Join the community</h1>
+
+
+        </div>
+        </>
     )
 }
